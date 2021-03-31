@@ -29,5 +29,6 @@ namespace Business.Constants
 
         public static string RentalFailed="Araç kiralama için uygun değil.";
         public static string RentalAdded="Araç kiralama başarılı.";
+        public static string CarImagesReachedMaxNumberOfPhoto="Maksimum görsel sayısına ulaşıldı, daha fazla ekleme yapılamaz.";
     }
 }
