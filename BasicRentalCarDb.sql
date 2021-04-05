@@ -30,7 +30,20 @@ Id int PRIMARY KEY IDENTITY(1,1),
 FirstName varchar(50) NOT NULL,
 LastName varchar(50) NOT NULL,
 Email varchar(100) NOT NULL,
-Password varchar(100) NOT NULL
+PasswordHash varbinary(100) NOT NULL,
+PasswordSalt varbinary(100) NOT NULL,
+Status bit NOT NULL
+)
+
+CREATE TABLE OperationClaims(
+Id int PRIMARY KEY IDENTITY(1,1),
+Name varchar(250) NOT NULL
+)
+
+CREATE TABLE UserOpertaionClaims(
+Id int PRIMARY KEY IDENTITY(1,1),
+UserId int NOT NULL FOREIGN KEY REFERENCES Users(Id),
+OperationClaimId int NOT NULL FOREIGN KEY REFERENCES OperationClaims(Id)
 )
 
 CREATE TABLE Customers(
