@@ -40,7 +40,7 @@ Id int PRIMARY KEY IDENTITY(1,1),
 Name varchar(250) NOT NULL
 )
 
-CREATE TABLE UserOpertaionClaims(
+CREATE TABLE UserOperationClaims(
 Id int PRIMARY KEY IDENTITY(1,1),
 UserId int NOT NULL FOREIGN KEY REFERENCES Users(Id),
 OperationClaimId int NOT NULL FOREIGN KEY REFERENCES OperationClaims(Id)

@@ -7,6 +7,7 @@ using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Business.BusinessAspects.Autofac;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
@@ -21,6 +22,7 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
+        //[SecuredOperation("car.add")]
         [ValidationAspect(typeof(ValidationTool))]
         public IResult Add(Car car)
         {
@@ -35,7 +37,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarDeleted);
 
         }
-
+        //[SecuredOperation("admin")]
         public IDataResult<List<Car>> GetAll()
         {
             return new SuccessDataResult<List<Car>>( _carDal.GetAll());
