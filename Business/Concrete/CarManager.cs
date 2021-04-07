@@ -38,6 +38,7 @@ namespace Business.Concrete
 
         }
         //[SecuredOperation("admin")]
+        [CacheAspect]
         public IDataResult<List<Car>> GetAll()
         {
             return new SuccessDataResult<List<Car>>( _carDal.GetAll());
