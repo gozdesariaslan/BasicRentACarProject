@@ -10,6 +10,7 @@ using System.Text;
 using Business.BusinessAspects.Autofac;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Caching;
 using Core.CrossCuttingConcerns.Validation;
@@ -51,10 +52,18 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>( _carDal.GetAllCarDetails());
         }
-
+        [TransactionScopeAspect]
         public IResult AddTransactionalTest(Car car)
         {
-            throw new NotImplementedException();
+            Add(car);
+
+            if (car.DailyPrice > 10)
+            {
+                throw new Exception("");
+            }
+
+            Add(car);
+            return new SuccessResult();
         }
 
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
