@@ -9,6 +9,7 @@ using System.Text;
 using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Business;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -55,6 +56,11 @@ namespace Business.Concrete
 
             Add(rental);
             return new SuccessResult();
+        }
+
+        public IDataResult<List<RentalDetailDto>> GetRentalDetail()
+        {
+            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetAllRentalDetails());
         }
 
         private IResult CheckIfCarAvailableForRent(Rental rental)

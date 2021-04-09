@@ -3,6 +3,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Entities.DTOs;
 
 namespace Business.Abstract
 {
@@ -12,5 +13,6 @@ namespace Business.Abstract
         IResult Update(Rental rental);
         IResult Delete(Rental rental);
         IResult TransactionalTest(Rental rental);
+        IDataResult<List<RentalDetailDto>> GetRentalDetail();
     }
 }
