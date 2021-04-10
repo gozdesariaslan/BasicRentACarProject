@@ -1,1 +1,4 @@
-<p>customer works!</p>
+<ul class="list-group">
+    <li class="list-group-item active" aria-current="true">Müşteriler</li>
+    <li *ngFor="let customer of customers" class="list-group-item">{{customer.companyName}}</li>
+</ul>
