@@ -8,7 +8,7 @@ import { CarDetailDto } from '../models/carDetailDto';
   providedIn: 'root',
 })
 export class CarService {
-  apiUrl = 'https://localhost:44317/api/cars/getall';
+  apiUrl = 'https://localhost:44317/api/cars/getcardetaildto';
 
   constructor(private httpClient: HttpClient) {}
 
