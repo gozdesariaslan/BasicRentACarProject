@@ -22,6 +22,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 using Core.Extensions;
+using Microsoft.OpenApi.Models;
 
 namespace WebAPI
 {
@@ -80,6 +81,15 @@ namespace WebAPI
             {
                 new CoreModule()
             });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                { 
+                    Title = "Rental Car Project API",
+                    Description = "v1"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -91,6 +101,11 @@ namespace WebAPI
             }
 
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader());
+
+            app.UseSwagger().UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("v1/swagger.json", "Swagger v1 Test");
+            });
 
             app.UseHttpsRedirection();
 
