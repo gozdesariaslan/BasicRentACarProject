@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31005.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{94094822-D08A-402A-BDB3-DC32E90B3A37}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{70A52279-AE60-495D-94D3-DE62A3A41CBB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{1933BC83-4A12-484B-B0F6-1DDF7EF51411}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{47DA4F0A-DC7F-4CA7-9D0A-CA35780DFDA8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{593AC38E-24D7-4B72-B615-A538B07D31AC}"
 EndProject
@@ -18,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		BasicRentalCarDb.sql = BasicRentalCarDb.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{66932BA5-95BA-43EB-9F5A-668A7E9CA919}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{66932BA5-95BA-43EB-9F5A-668A7E9CA919}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,10 +36,6 @@ Global
 		{1933BC83-4A12-484B-B0F6-1DDF7EF51411}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1933BC83-4A12-484B-B0F6-1DDF7EF51411}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1933BC83-4A12-484B-B0F6-1DDF7EF51411}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47DA4F0A-DC7F-4CA7-9D0A-CA35780DFDA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47DA4F0A-DC7F-4CA7-9D0A-CA35780DFDA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47DA4F0A-DC7F-4CA7-9D0A-CA35780DFDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47DA4F0A-DC7F-4CA7-9D0A-CA35780DFDA8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{593AC38E-24D7-4B72-B615-A538B07D31AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{593AC38E-24D7-4B72-B615-A538B07D31AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{593AC38E-24D7-4B72-B615-A538B07D31AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
